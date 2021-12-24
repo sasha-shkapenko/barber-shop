@@ -1,0 +1,36 @@
+.pre-title {
+  font-size: 11px;
+  font-weight: 600;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--grey-pre-title);
+
+  margin-bottom: 20px;
+}
+.pre-title--black {
+  display: flex;
+  align-items: center;
+  color: $black-pre-title;
+  &::before {
+    content: "";
+    display: block;
+    width: 63px;
+    height: 1px;
+    margin-right: 21px;
+    background-color: $black-pre-title;
+  }
+}
+.pre-title--grey {
+  display: flex;
+  align-items: center;
+  color: $grey-pre-title;
+  &::before {
+    content: "";
+    display: block;
+    width: 63px;
+    height: 1px;
+    margin-right: 21px;
+    background-color: $grey-pre-title;
+  }
+}
