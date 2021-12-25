@@ -42,7 +42,62 @@
                 <a class="header__tel" href="">+30 044 111 11 11</a>
                 <button class="header__button btn" type="button"> Онлайн запись</button>
             </div>
+
+
+            <button class="open-menu js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg width="40" height="40">
+                    <use  class="open-icon" href="./images/icons.svg#icon-menu"></use>
+                </svg>
+            </button>
         </div>
+
+        <div class="mob-menu js-menu-container" id="mobile-menu">
+            <button class="close-menu js-close-menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg width="40" height="40">
+                    <use class="close-icon" href="./images/icons.svg#icon-cross"></use>
+                </svg>
+            </button>
+            
+                
+                    <ul class="mob-nav__list">
+                        <li class="mob-nav__item">
+                            <a class="mob-nav__link" href="" class="mob-menu-link link">О нас</a>
+                        </li>
+                        <li class="mob-nav__item">
+                            <a class="mob-nav__link" href="" class="mob-menu-link link current">Услуги и цены</a>
+                        </li>
+                        <li class="mob-nav__item">
+                            <a class="mob-nav__link" href="#masters" class="mob-menu-link link">Мастера</a>
+                        </li>
+                        <li class="mob-nav__item">
+                            <a class="mob-nav__link" href="" class="mob-menu-link link">Контакты</a>
+                        </li>
+                    </ul>
+                
+                
+                    <div class="mob-connect">
+                        <a class="mob-tel" href="tel:+380441111111">+38 044 111 11 11</a>
+                        <button class="mob-button btn" type="button">
+                            онлайн-запись
+                        </button>
+                    </div>
+                    <ul class="mob-socials__list">
+                        <li class="mob-socials__item">
+                            <a class="mob-socials__link" href="" class="mob-socials-link link">Instagram</a>
+                        </li>
+                        <li class="mob-socials__item">
+                            <a class="mob-socials__link" href="" class="mob-socials-link link">Youtube</a>
+                        </li>
+                    </ul>
+                
+            
+        </div>
+
+
+
+
+
+
     </header>
 
     <main>
@@ -365,5 +420,6 @@
             </ul>
         </div>
     </footer>
+    <script src="./js/menu.js"></script>
 </body>
 </html>
