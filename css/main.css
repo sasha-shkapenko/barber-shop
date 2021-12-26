@@ -430,6 +430,226 @@ img {
   line-height: calc(19 / 14);
 }
 
+.backdrop {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 1;
+  transition: opacity 250ms linear;
+  overflow-y: scroll;
+}
+
+@media screen and (max-width: 767px) {
+  .backdrop {
+    padding: 94px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-window {
+  position: relative;
+  padding: 47px 40px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  transition: transform 250ms linear;
+}
+
+.backdrop.is-hidden .modal-window {
+  transform: translate(-50%, -50%) scale(2);
+}
+
+@media screen and (min-width: 768px) {
+  .modal-window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .modal-window {
+    max-width: 450px;
+    width: 100%;
+    min-height: 609px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-window {
+    width: 528px;
+    height: 581px;
+  }
+}
+
+.modal-window__title {
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #303030;
+}
+
+.close__btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.close__icon {
+  fill: #303030;
+  transition: fill 250ms linear;
+}
+
+.close__btn:hover .close__icon,
+.close__btn:focus .close__icon {
+  fill: #ff6c00;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.form-group__feedback {
+  margin-bottom: 20px;
+}
+
+.form-group__label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+}
+
+.form-group__input,
+.form-group__textarea {
+  padding: 14px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border-color 250ms linear;
+}
+
+.form-group__input {
+  padding-left: 42px;
+}
+
+.form-group__icon {
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: 12px;
+  transition: fill 250ms linear;
+}
+
+.form-group__input:focus,
+.form-group__textarea:focus {
+  border-color: #ff6c00;
+  outline: none;
+}
+
+.form-group__input:focus + .form-group__icon {
+  fill: #ff6c00;
+}
+
+.form-group__textarea {
+  height: 120px;
+  resize: none;
+}
+
+.form-group__policy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+@media screen and (min-width: 1200px) {
+  .form-group__policy {
+    font-size: 14px;
+  }
+}
+
+.form-group__policy::before {
+  content: "";
+  display: inline-block;
+  align-self: center;
+  margin-right: 7px;
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+}
+
+.form-group__checkbox:checked + .form-group__policy::before {
+  border-color: #ff6c00;
+  background-color: #ff6c00;
+  background-image: url(../images/icon-check.svg);
+  background-size: contain;
+  background-origin: border-box;
+  transition: 250ms linear;
+}
+
+.form-group__btn {
+  margin: 0 auto;
+  margin-top: 30px;
+  display: block;
+  height: auto;
+  width: 200px;
+  border-radius: 30px;
+  padding: 10px 45px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background-color: transparent;
+  color: #303030;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.88;
+  transition: 200ms linear;
+}
+
+.form-group__btn:hover, .form-group__btn:focus {
+  color: #ffffff;
+}
+
+.policy-conditions {
+  color: #ff6c00;
+  text-decoration: underline;
+  margin-left: 4px;
+  font-size: 12px;
+}
+
+@media screen and (min-width: 1200px) {
+  .policy-conditions {
+    font-size: 14px;
+  }
+}
+
 .hero__container {
   display: flex;
   width: 100%;
