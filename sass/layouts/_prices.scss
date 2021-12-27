@@ -12,6 +12,9 @@
   }
 }
 .prices-wrap {
+  @media screen and (max-width: 1199px) {
+    background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+  }
   @media screen and (min-width: 1200px) {
     display: flex;
   }
@@ -23,13 +26,22 @@
     width: 50%;
   }
 }
-
 .prices__list--left {
-  background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+  @media screen and (max-width: 1199px) {
+    padding-bottom: 20px;
+  }
+  @media screen and (min-width: 1200px) {
+    background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+  }
 }
 
 .prices__list--right {
-  background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+  @media screen and (max-width: 1199px) {
+    padding-top: 0;
+  }
+  @media screen and (min-width: 1200px) {
+    background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+  }
 }
 .prices__item {
   display: flex;

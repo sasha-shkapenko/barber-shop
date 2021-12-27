@@ -53,6 +53,9 @@
   line-height: calc(30 / 18);
   letter-spacing: 0.02em;
 }
+.link__mail {
+  text-decoration: underline;
+}
 .contacts__title--bottom {
   color: $white-title;
 }
