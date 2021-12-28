@@ -43,3 +43,11 @@
     color: $accent;
   }
 }
+%form__label {
+  display: block;
+  position: absolute;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+}

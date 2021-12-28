@@ -108,6 +108,14 @@ img {
   color: #ff6c00;
 }
 
+.form-group__label, .feedback-label {
+  display: block;
+  position: absolute;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+}
+
 .section {
   padding: 84px 0;
 }
@@ -509,7 +517,7 @@ img {
 }
 
 .modal-window__title {
-  margin-bottom: 12px;
+  margin-bottom: 30px;
   font-size: 20px;
   font-weight: 700;
   line-height: 1.15;
@@ -549,16 +557,33 @@ img {
   text-align: left;
 }
 
-.form-group__feedback {
-  margin-bottom: 20px;
+.form-group:not(:last-child) {
+  margin-bottom: 25px;
 }
 
 .form-group__label {
-  display: block;
-  margin-bottom: 4px;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
+  top: 50%;
+  left: 42px;
+  transform: translateY(-50%);
+  transition: color 300ms linear, transform 300ms linear;
+}
+
+.form-group__input:focus + .form-group__label,
+.form-group__input:not(:placeholder-shown) + .form-group__label {
+  color: #ff6c00;
+  transform: translate(-30px, -40px);
+}
+
+.feedback-label {
+  top: 14px;
+  left: 14px;
+  transition: color 300ms linear, transform 300ms linear;
+}
+
+.form-group__textarea:focus + .feedback-label,
+.form-group__textarea:not(:placeholder-shown) + .feedback-label {
+  color: #ff6c00;
+  transform: translate(-3px, -33px);
 }
 
 .form-group__input,
@@ -574,11 +599,16 @@ img {
   padding-left: 42px;
 }
 
+.form-group__feedback {
+  margin-bottom: 20px;
+}
+
 .form-group__icon {
   position: absolute;
   display: inline-block;
   top: 50%;
   left: 12px;
+  transform: translateY(-50%);
   transition: fill 250ms linear;
 }
 
