@@ -38,6 +38,7 @@
   line-height: calc(15 / 11);
   letter-spacing: 0.2em;
   color: rgba(48, 48, 48, 1);
+  transition: color 300ms linear;
   &:hover {
     color: $accent;
   }

@@ -17,3 +17,12 @@
     background-color: $accent;
   }
 }
+.btn--white {
+  transition: color 300ms linear, background-color 300ms linear;
+
+  &:hover,
+  &:focus {
+    color: $white-btn;
+    background-color: $accent;
+  }
+}

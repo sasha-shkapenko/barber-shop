@@ -71,13 +71,13 @@
   height: 44px;
   border-radius: 50%;
   background-color: #ffffff;
-}
+  color: $black-title;
 
-.socials__icon {
-  fill: $black-title;
-  transition: fill 300ms linear;
-  .socials__link:hover &,
-  .socials__link:focus & {
-    fill: $accent;
+  transition: color 300ms linear;
+  &:hover {
+    color: $accent;
   }
+}
+.socials__icon {
+  fill: currentColor;
 }

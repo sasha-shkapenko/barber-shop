@@ -47,14 +47,31 @@
   background-color: #191c26;
   width: 100%;
   padding: 164px 71px 234px;
-  background-image: linear-gradient(
-      rgba(25, 28, 38, 0.2),
-      rgba(25, 28, 38, 0.2)
-    ),
-    url(../images/hero-mob.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
+  @media screen and (max-width: 767px) {
+    background-image: linear-gradient(
+        rgba(25, 28, 38, 0.2),
+        rgba(25, 28, 38, 0.2)
+      ),
+      url(../images/hero-mob.jpg);
+  }
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(
+        rgba(25, 28, 38, 0.2),
+        rgba(25, 28, 38, 0.2)
+      ),
+      url(../images/hero-tablet.jpg);
+  }
+  @media screen and (min-width: 1200px) {
+    background-image: linear-gradient(
+        rgba(25, 28, 38, 0.2),
+        rgba(25, 28, 38, 0.2)
+      ),
+      url(../images/hero-desktop.jpg);
+  }
 }
 .hero__pre-title {
   color: $grey-pre-title;
